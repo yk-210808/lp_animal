@@ -6,6 +6,7 @@ import { globSync } from 'glob';
 import path from 'path';
 import ViteSvgSpriteWrapper from 'vite-svg-sprite-wrapper';
 import SVGSpriter from 'svg-sprite';
+import vitePluginSsinc from 'vite-plugin-ssinc';
 
 const htmlFiles = Object.fromEntries(
   globSync('src/**/*.html').map(file => [
@@ -94,6 +95,9 @@ export default defineConfig({
       icons: 'static/img/svg/*.svg',
       outputDir: 'static/img/svg/',
       sprite: SVGSpriter.Config,
+    }),
+    vitePluginSsinc({
+      includeExtensions: ['shtml', 'html'],
     }),
   ],
 })

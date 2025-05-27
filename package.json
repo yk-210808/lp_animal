@@ -16,6 +16,7 @@
   },
   "dependencies": {
     "autoprefixer": "^10.4.20",
-    "glob": "^11.0.1"
+    "glob": "^11.0.1",
+    "vite-plugin-ssinc": "^1.0.11"
   }
 }

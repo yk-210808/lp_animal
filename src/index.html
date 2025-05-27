@@ -17,10 +17,12 @@
   <meta property="og:site_name" content="">
   <meta property="og:image" content="/img/og-img.png">
 
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+
   <link rel="stylesheet" type="text/css" href="/scss/style.scss">
 
-
-  <!-- <script src="/js/lib/b_browser_switcher.js"></script> -->
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
 </head>
 
@@ -28,17 +30,32 @@
 <body>
   <div id="wrapper">
 
+    <!-- シャープと-の余白を詰めると、インクルードが表示される -->
+    <!-- #include file="inc/c-header.html" -->
+
     <header>
-      <div id="header" class="c-header outer-block">
+      <div id="header" class="c-header">
         <div class="inner-block">
-          <span class="header-txt">header</span>
+          <a href="/" class="logo"><img src="/img/logo_company.png" alt="COMPANY LOGO Lorem Ipsum available"></a>
+          <div class="link-items">
+            <ul class="link-list">
+              <li><a href="#">Home</a></li>
+              <li><a href="#">About</a></li>
+              <li><a href="#">Service</a></li>
+              <li><a href="#">Contact</a></li>
+            </ul>
+            <div class="c-form">
+              <input type="text" name="text" placeholder="Search..." class="input-text">
+              <button type="button" class="send-btn"><img src="/img/icon_search.svg" alt=""></button>
+            </div>
+          </div>
         </div><!-- /inner-block -->
       </div><!-- /header -->
     </header>
 
-    <main class="home outer-block">
+    <main class="home ">
       <div class="inner-block">
-        homeです
+        a
 
         <div class="btn">
           <span>ボタン</span>
@@ -55,7 +72,7 @@
     </main>
 
     <footer>
-      <div id="footer" class="outer-block">
+      <div id="footer" class="">
         <div class="inner-block">
           footer
         </div><!-- /inner-block -->

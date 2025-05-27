@@ -1,14 +1,25 @@
 @use '../mixin/mixin' as *;
+@use '../setting/setting' as *;
 
 /* --------------------------------
 c-header
 ----------------------------------- */
 .c-header {
-  height: 140px;
-  background-color: tomato;
-  font-weight: bold;
-  @include sp {
-    height: vw(100,375);
-    background-color: lightgreen;
+  background-color: $primaryYellow01;
+  color: #fff;
+
+  .logo {
+    display: inline-block;
+  }
+
+  .link-list {
+    display: flex;
+    align-items: center;
+    font-size: 29px;
+    font-weight: 500;
+    
+    a {
+      padding: 0 22px;
+    }
   }
 }

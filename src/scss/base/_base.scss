@@ -9,7 +9,7 @@ input,
 textarea,
 select,
 button {
-  font-family: "游ゴシック体", YuGothic, "游ゴシック", "Yu Gothic", "メイリオ", Meiryo, sans-serif;
+  font-family: "Poppins","游ゴシック体", YuGothic, "游ゴシック", "Yu Gothic", "メイリオ", Meiryo, sans-serif;
   font-weight: 400;
 }
 
@@ -139,9 +139,7 @@ main {
   position: relative;
 }
 
-#wrapper,
-.outer-block {
-  min-width: 1080px;
+#wrapper{
   @include sp {
     min-width: 320px;
   }
@@ -152,7 +150,7 @@ main {
   position: relative;
   @include pc {
     padding: 0 30px;
-    width: 1040px;
+    max-width: 1220px;
   }
   @include sp {
     padding: 0 20px;
