@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="format-detection" content="telephone=no">
+  <meta name="viewport" content="width=device-width">
+  <link rel="shortcut icon" href="/favicon.ico">
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+
+  <title>Page Title</title>
+  <meta name="keywords" content="">
+
+  <meta property="og:title" content="">
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="ja_JP">
+  <meta property="og:site_name" content="">
+  <meta property="og:image" content="/img/og-img.png">
+
+  <link rel="stylesheet" type="text/css" href="/scss/style.scss">
+
+
+  <!-- <script src="/js/lib/b_browser_switcher.js"></script> -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+</head>
+
+
+<body>
+  <div id="wrapper">
+
+    <header>
+      <div id="header" class="c-header outer-block">
+        <div class="inner-block">
+          <span class="header-txt">header</span>
+        </div><!-- /inner-block -->
+      </div><!-- /header -->
+    </header>
+
+    <main class="home outer-block">
+      <div class="inner-block">
+        homeです
+
+        <div class="btn">
+          <span>ボタン</span>
+          <svg class="c-svg" width="20" height="14">
+            <use xlink:href="./img/svg/sprite.min.svg#arrow-black" />
+          </svg>
+        </div>
+
+        <picture class="img">
+          <source media="(min-width: 641px)" srcset="/img/img-pc.jpg.webp, /img/img-pc@2x.jpg.webp 2x" width="400" height="300">
+          <img src="/img/img-sp.jpg.webp" loading="lazy" width="600" height="600" alt="">
+        </picture>
+      </div>
+    </main>
+
+    <footer>
+      <div id="footer" class="outer-block">
+        <div class="inner-block">
+          footer
+        </div><!-- /inner-block -->
+      </div><!-- /footer -->
+    </footer>
+
+    <div id="pagetop"><a href="#wrapper"><img src="img/common/pagetop.png" alt="↑"></a></div>
+
+  </div><!-- /wrapper -->
+
+  <!-- <script src="/js/lib/jquery-3.6.3.min.js"></script> -->
+  <script type="module" src="/js/main.js"></script>
+</body>
+
+</html>
