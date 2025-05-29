@@ -56,3 +56,7 @@
   $rate: 100 / $viewport;
   @return $rate * $size * 1vw;
 }
+
+@mixin boxShadow($width: 0, $height: 0, $blur: 17px, $spread: 16px, $color: rgba(74, 74, 74, 0.1)) {
+  box-shadow: $width $height $blur $spread $color;
+}

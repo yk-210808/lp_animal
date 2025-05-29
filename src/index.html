@@ -24,6 +24,7 @@
   <link rel="stylesheet" type="text/css" href="/scss/style.scss">
 
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+  <script src="https://kit.fontawesome.com/bd1a13a749.js" crossorigin="anonymous"></script>
 </head>
 
 
@@ -45,36 +46,267 @@
               <li><a href="#">Contact</a></li>
             </ul>
             <div class="c-form">
-              <input type="text" name="text" placeholder="Search..." class="input-text">
-              <button type="button" class="send-btn"><img src="/img/icon_search.svg" alt=""></button>
+              <div class="inn shadow">
+                <input type="text" name="text" placeholder="Search..." class="input-text">
+                <button type="button" class="send-btn">
+                  <svg class="c-svg" width="20" height="14">
+                    <use xlink:href="/img/svg/sprite.svg#icon_search" alt="">
+                  </svg>
+                </button>
+              </div>
             </div>
           </div>
         </div><!-- /inner-block -->
       </div><!-- /header -->
     </header>
 
-    <main class="home ">
-      <div class="inner-block">
-        a
-
-        <div class="btn">
-          <span>ボタン</span>
-          <svg class="c-svg" width="20" height="14">
-            <use xlink:href="./img/svg/sprite.min.svg#arrow-black" />
-          </svg>
+    <main class="home">
+      <section class="mv-block">
+        <div class="inner-block">
+          <div class="txt-items">
+            <h1 class="ttl">First I wanted to be a veterinarian</h1>
+            <p class="detail">Lorem Ipsum available but the majority have suffered alteration in some form, by injected humour randomised words.</p>
+            <div class="btn-items">
+              <a href="#" class="c-btn c-btn--secondary">Contact Us</a>
+              <a href="#" class="c-btn c-btn--primary">Our Service</a>
+            </div>
+          </div>
+          <div class="img"><img src="/img/mv_img.png" alt=""></div>
         </div>
+      </section>
 
-        <picture class="img">
-          <source media="(min-width: 641px)" srcset="/img/img-pc.jpg.webp, /img/img-pc@2x.jpg.webp 2x" width="400" height="300">
-          <img src="/img/img-sp.jpg.webp" loading="lazy" width="600" height="600" alt="">
-        </picture>
+      <section class="about-block">
+        <div class="inner-block">
+          <div class="txt-items">
+            <h2 class="ttl">As a veterinarian and lover of animals.</h2>
+            <p class="detail">Lorem Ipsum available but the majoty suffered alteration in some form, by humour randomised words.</p>
+            <a href="#" class="c-btn c-btn--thirdly">Our Service</a>
+          </div>
+          <div class="c-video">
+            <div class="inn">
+              <video poster="/img/video_thumb_01.jpg">
+                <source src="/img/example-video.mp4" type="video/mp4" />
+              </video>
+              <button type="button" class="js--videoPlayTrigger video-play-trigger"></button>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="care-block">
+        <div class="inner-block">
+          <h2 class="c-ttl01">Title Here</h2>
+          <p class="c-ttl01-detail"> Lorem Ipsum available, but the majority have <br class="pc">suffered alteration in some form.</p>
+          <ul class="c-card-list">
+            <li>
+              <div class="img"><img src="/img/care_01.jpg" alt=""></div>
+              <h3 class="list-ttl">Veterinarian</h3>
+              <p class="list-detail"> Lorem Ipsum available, but the majority have suffered alteration in some.</p>
+            </li>
+            <li>
+              <div class="img"><img src="/img/care_02.jpg" alt=""></div>
+              <h3 class="list-ttl">Vaccination Care</h3>
+              <p class="list-detail"> Lorem Ipsum available, but the majority have suffered alteration in some.</p>
+            </li>
+            <li>
+              <div class="img"><img src="/img/care_03.jpg" alt=""></div>
+              <h3 class="list-ttl">Dental Care</h3>
+              <p class="list-detail"> Lorem Ipsum available, but the majority have suffered alteration in some.</p>
+            </li>
+          </ul>
+        </div>
+      </section>
+
+      <section class="about-block reverse">
+        <div class="inner-block">
+          <div class="txt-items">
+            <h2 class="ttl">As a veterinarian and lover of animals.</h2>
+            <p class="detail">Lorem Ipsum available but the majoty suffered alteration in some form, by humour randomised words.</p>
+            <a href="#" class="c-btn c-btn--thirdly">Our Service</a>
+          </div>
+          <div class="c-video reverse">
+            <div class="inn">
+              <video poster="/img/video_thumb_02.jpg">
+                <source src="/img/example-video.mp4" type="video/mp4" />
+              </video>
+              <button type="button" class="js--videoPlayTrigger video-play-trigger"></button>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="care-block">
+        <div class="inner-block">
+          <h2 class="c-ttl01">Title Here</h2>
+          <p class="c-ttl01-detail"> Lorem Ipsum available, but the majority have <br class="pc">suffered alteration in some form.</p>
+          <ul class="c-card-list">
+            <li>
+              <div class="img"><img src="/img/dog_01.jpg" alt=""></div>
+              <p class="price"><span class="correction">$50</span>$30</p>
+              <a href="#" class="c-btn c-btn--secondary c-btn--rounded">Buy Now</a>
+            </li>
+            <li>
+              <div class="img"><img src="/img/dog_02.jpg" alt=""></div>
+              <p class="price"><span class="correction">$40</span>$25</p>
+              <a href="#" class="c-btn c-btn--secondary c-btn--rounded">Buy Now</a>
+            </li>
+            <li>
+              <div class="img"><img src="/img/dog_03.jpg" alt=""></div>
+              <p class="price"><span class="correction">$45</span>$20</p>
+              <a href="#" class="c-btn c-btn--secondary c-btn--rounded">Buy Now</a>
+            </li>
+          </ul>
+        </div>
+      </section>
+
+      <section class="team-block">
+        <div class="inner-block">
+          <h2 class="c-ttl01">The vetcare team</h2>
+          <p class="c-ttl01-detail"> Lorem Ipsum available, but the majority have <br class="pc">suffered alteration in some form.</p>
+          <ul class="c-card-list c-card-list--secondary">
+            <li>
+              <div class="img"><img src="/img/doctor_01.jpg" alt=""></div>
+              <p class="name">Jennifer Mullen</p>
+              <p class="job">VETERINARY</p>
+              <ul class="c-sns-list">
+                <li><a href="#"><i class="fa-brands fa-instagram fa-lg"></i></a></li>
+                <li><a href="#"><i class="fa-brands fa-facebook-f fa-lg"></i></a></li>
+                <li><a href="#"><i class="fa-brands fa-twitter"></i></a></li>
+                <li><a href="#"><i class="fa-brands fa-whatsapp fa-lg"></i></a></li>
+              </ul>
+            </li>
+            <li>
+              <div class="img"><img src="/img/doctor_02.jpg" alt=""></div>
+              <p class="name">Sheeren Collins</p>
+              <p class="job">ADMINISTRATION</p>
+              <ul class="c-sns-list">
+                <li><a href="#"><i class="fa-brands fa-instagram fa-lg"></i></a></li>
+                <li><a href="#"><i class="fa-brands fa-facebook-f fa-lg"></i></a></li>
+                <li><a href="#"><i class="fa-brands fa-twitter"></i></a></li>
+                <li><a href="#"><i class="fa-brands fa-whatsapp fa-lg"></i></a></li>
+              </ul>
+            </li>
+            <li>
+              <div class="img"><img src="/img/doctor_03.jpg" alt=""></div>
+              <p class="name">Jennifer Mullen</p>
+              <p class="job">VETERINARY</p>
+              <ul class="c-sns-list">
+                <li><a href="#"><i class="fa-brands fa-instagram fa-lg"></i></a></li>
+                <li><a href="#"><i class="fa-brands fa-facebook-f fa-lg"></i></a></li>
+                <li><a href="#"><i class="fa-brands fa-twitter"></i></a></li>
+                <li><a href="#"><i class="fa-brands fa-whatsapp fa-lg"></i></a></li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+      </section>
+
+      <div class="data-block">
+        <div class="inner-block">
+          <ul class="data-list">
+            <li>
+              <div class="icon"><img src="/img/icon_heart.svg" alt=""></div>
+              <p class="number">+34793</p>
+              <p class="data-name">Happy Clients</p>
+            </li>
+            <li>
+              <div class="icon"><img src="/img/icon_stethoscope.svg" alt=""></div>
+              <p class="number">+45382</p>
+              <p class="data-name">Department</p>
+            </li>
+            <li>
+              <div class="icon"><img src="/img/icon_injection.svg" alt=""></div>
+              <p class="number">+34793</p>
+              <p class="data-name">Vaccinations</p>
+            </li>
+          </ul>
+        </div>
       </div>
+
+      <section class="post-block">
+        <div class="inner-block">
+          <h2 class="c-ttl01">Recent Posts</h2>
+          <p class="c-ttl01-detail"> Lorem Ipsum available, but the majority have <br class="pc">suffered alteration in some form.</p>
+          <ul class="c-card-list c-card-list--post">
+            <li>
+              <a href="#">
+                <div class="img"><img src="/img/post_01.jpg" alt=""></div>
+                <div class="txt-items">
+                  <h3 class="post-ttl">As a veterinarian and lover of animals</h3>
+                  <p class="post-date">FEBRUARY 09, 2020</p>
+                  <p class="post-detail">Lorem Ipsum available, but the majority have suffered alteration in some words which look.</p>
+                  <p class="readmore">Read More+</p>
+                </div>
+              </a>
+            </li>
+            <li>
+              <a href="#">
+                <div class="img"><img src="/img/post_02.jpg" alt=""></div>
+                <div class="txt-items">
+                  <h3 class="post-ttl">As a veterinarian and lover of animals</h3>
+                  <p class="post-date">FEBRUARY 09, 2020</p>
+                  <p class="post-detail">Lorem Ipsum available, but the majority have suffered alteration in some words which look.</p>
+                  <p class="readmore">Read More+</p>
+                </div>
+              </a>
+            </li>
+            <li>
+              <a href="#">
+                <div class="img"><img src="/img/post_03.jpg" alt=""></div>
+                <div class="txt-items">
+                  <h3 class="post-ttl">As a veterinarian and lover of animals</h3>
+                  <p class="post-date">FEBRUARY 09, 2020</p>
+                  <p class="post-detail">Lorem Ipsum available, but the majority have suffered alteration in some words which look.</p>
+                  <p class="readmore">Read More+</p>
+                </div>
+              </a>
+            </li>
+          </ul>
+        </div>
+      </section>
     </main>
 
     <footer>
-      <div id="footer" class="">
+      <div id="footer" class="c-footer">
         <div class="inner-block">
-          footer
+          <div class="link-items">
+            <div class="link-item">
+              <a href="#" class="list-ttl">About</a>
+              <ul class="link-list">
+                <li><a href="#">History</a></li>
+                <li><a href="#">Our Team</a></li>
+                <li><a href="#">Brand Guidelines</a></li>
+                <li><a href="#">Terms & Condition</a></li>
+                <li><a href="#">Privacy Policy</a></li>
+              </ul>
+            </div>
+            <div class="link-item">
+              <a href="#" class="list-ttl">Services</a>
+              <ul class="link-list">
+                <li><a href="#">How to Order</a></li>
+                <li><a href="#">Our Product</a></li>
+                <li><a href="#">Order Status</a></li>
+                <li><a href="#">Promo</a></li>
+                <li><a href="#">Payment Method</a></li>
+              </ul>
+            </div>
+          </div>
+          <div class="other-items">
+            <div class="ttl-area">
+              <h2 class="footer-ttl">Title Here</h2>
+              <p class="footer-ttl-detail"> Lorem Ipsum available, but the majority</p>
+            </div>
+            <div class="c-form c-form--subsc">
+              <input type="email" name="email" class="input-subsc">
+              <button type="button" class="send-btn"><i class="fa-solid fa-paper-plane"></i></button>
+            </div>
+            <ul class="c-sns-list c-sns-list--secondary">
+              <li><a href="#"><i class="fa-brands fa-instagram"></i></a></li>
+              <li><a href="#"><i class="fa-brands fa-facebook-f"></i></a></li>
+              <li><a href="#"><i class="fa-brands fa-twitter"></i></a></li>
+              <li><a href="#"><i class="fa-brands fa-whatsapp"></i></a></li>
+            </ul>
+          </div>
         </div><!-- /inner-block -->
       </div><!-- /footer -->
     </footer>

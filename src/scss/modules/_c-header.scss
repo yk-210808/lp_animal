@@ -1,5 +1,5 @@
-@use '../mixin/mixin' as *;
-@use '../setting/setting' as *;
+@use '../mixin/mixin'as *;
+@use '../setting/setting'as *;
 
 /* --------------------------------
 c-header
@@ -7,9 +7,26 @@ c-header
 .c-header {
   background-color: $primaryYellow01;
   color: #fff;
+  height: 120px;
+
+  .inner-block {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 100%;
+  }
 
   .logo {
     display: inline-block;
+    flex-shrink: 0;
+  }
+
+  .link-items {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    margin-left: 56px;
   }
 
   .link-list {
@@ -17,9 +34,15 @@ c-header
     align-items: center;
     font-size: 29px;
     font-weight: 500;
-    
+
     a {
-      padding: 0 22px;
+      padding: 0 21px;
+
+      @include pc {
+        &:hover {
+          color: $primaryGreen01;
+        }
+      }
     }
   }
 }

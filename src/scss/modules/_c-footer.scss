@@ -1,1 +1,78 @@
-@use '../mixin/mixin' as *;
+@use '../mixin/mixin'as *;
+@use '../setting/setting'as *;
+
+.c-footer {
+  background-color: #343434;
+  color: #fff;
+
+  .inner-block {
+    padding-top: 150px;
+    padding-bottom: 190px;
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .link-items {
+    display: flex;
+    justify-content: space-between;
+    gap: 30px;
+    width: 47%;
+    margin-top: 15px;
+  }
+
+  .list-ttl {
+    font-size: 37px;
+    font-weight: 600;
+    line-height: 1;
+
+    @include pc {
+      &:hover {
+        color: $primaryGreen01;
+      }
+    }
+  }
+
+  .link-list {
+    font-size: 25px;
+    margin-top: 20px;
+
+    a {
+      display: inline-block;
+      padding: 2px 0;
+
+      @include pc {
+        &:hover {
+          color: $primaryGreen01;
+        }
+      }
+    }
+  }
+
+  .other-items {
+    width: 47%;
+  }
+
+  .footer-ttl {
+    font-size: 37px;
+    line-height: 1;
+    font-weight: 600;
+    text-align: right;
+  }
+
+  .footer-ttl-detail {
+    font-size: 25px;
+    line-height: 1;
+    margin-top: 14px;
+    text-align: right;
+  }
+
+  .c-form {
+    margin-top: 50px;
+    justify-content: end;
+  }
+
+  .c-sns-list {
+    margin-top: 50px;
+    justify-content: flex-end;
+  }
+}

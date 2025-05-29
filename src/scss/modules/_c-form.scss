@@ -1,0 +1,84 @@
+@use '../mixin/mixin'as *;
+@use '../setting/setting'as *;
+
+/* --------------------------------
+c-form
+----------------------------------- */
+
+.c-form {
+  .inn {
+    display: flex;
+    align-items: center;
+    width: fit-content;
+  }
+
+  .shadow {
+    @include boxShadow;
+  }
+
+  .input-text {
+    height: 50px;
+    font-size: 20px;
+    color: #fff;
+    background-color: $primaryYellow02;
+    padding: 5px 20px;
+    letter-spacing: 0.01em;
+    max-width: 200px;
+
+    &::placeholder {
+      color: #fff;
+    }
+  }
+
+  .send-btn {
+    background-color: $primaryGreen01;
+    height: 50px;
+    display: block;
+    padding: 5px 24px;
+    outline: 2px solid $primaryGreen01;
+    outline-offset: -2px;
+
+    .c-svg {
+      width: 23px;
+      height: 23px;
+      color: #fff;
+      transition: color $transition01;
+    }
+
+    @include pc {
+      &:hover {
+        background-color: #fff;
+
+        .c-svg,
+        .fa-solid {
+          color: $primaryGreen01;
+        }
+      }
+    }
+  }
+
+  .input-subsc {
+    background-color: $primaryYellow01;
+    color: #fff;
+    height: 90px;
+    padding: 20px;
+    max-width: 385px;
+    width: 100%;
+  }
+
+  &--subsc {
+    display: flex;
+    align-items: center;
+
+    .send-btn {
+      height: 90px;
+      max-width: 145px;
+      width: 100%;
+    }
+
+    .fa-solid {
+      font-size: 32px;
+      transition: color $transition01;
+    }
+  }
+}

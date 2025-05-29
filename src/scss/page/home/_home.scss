@@ -1,28 +1,147 @@
-/* -----------------------------------------------
-* home Module
-* homeページ用
--------------------------------------------------- */
-@use '../../mixin/mixin' as *;
+@use '../../mixin/mixin'as *;
+@use '../../setting/setting'as *;
 
 .home {
-  background-color: green;
-  @include sp {
-    background-color: skyblue;
+  .mv-block {
+    background-color: $primaryYellow02;
+    color: #fff;
+
+    .inner-block {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding-top: 88px;
+      padding-bottom: 88px;
+      gap: 38px;
+    }
+
+    .ttl {
+      font-size: 66px;
+      font-weight: 600;
+      letter-spacing: 0.01em;
+      line-height: 1.2;
+    }
+
+    .detail {
+      font-size: 29px;
+      letter-spacing: 0.01em;
+      line-height: 1.2;
+      margin-top: 30px;
+    }
+
+    .btn-items {
+      display: flex;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 35px;
+      margin-top: 40px;
+    }
+
+    .img {
+      width: 36%;
+      flex-shrink: 0;
+    }
   }
 
-  .btn {
-    background-color: #333;
-    color: #fff;
-    transition: .3s ease-in-out;
-    cursor: pointer;
-    display: flex;
-    align-items: center;
-    height: 100px;
-    @include pc {
-      &:hover {
-        color: #333;
-        background-color: #fff;
+  .about-block {
+    .inner-block {
+      padding-top: 140px;
+      padding-bottom: 140px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .ttl {
+      font-size: 50px;
+      font-weight: 600;
+      line-height: 1.2;
+    }
+
+    .detail {
+      font-size: 29px;
+      letter-spacing: 0.01em;
+      line-height: 1.2;
+      margin-top: 35px;
+    }
+
+    .c-btn {
+      margin-top: 40px;
+    }
+
+    &.reverse {
+      text-align: right;
+
+      .inner-block {
+        flex-direction: row-reverse;
       }
+
+      .c-btn {
+        margin-left: auto;
+      }
+    }
+  }
+
+  .care-block {
+    background-color: $primaryYellow02;
+    color: #fff;
+
+    .inner-block {
+      padding-top: 100px;
+      padding-bottom: 100px;
+    }
+  }
+
+  .team-block {
+    .inner-block {
+      padding-top: 140px;
+      padding-bottom: 140px;
+    }
+  }
+
+  .data-block {
+    background: url(../img/bg-data-block.jpg) no-repeat center / cover;
+    color: #fff;
+    text-align: center;
+
+    .inner-block {
+      padding-top: 165px;
+      padding-bottom: 165px;
+    }
+
+    .data-list {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 50px;
+    }
+
+    .icon {
+      height: 90px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .number {
+      font-size: 41px;
+      font-weight: 500;
+      line-height: 1;
+      margin-top: 58px;
+    }
+
+    .data-name {
+      font-size: 37px;
+      font-weight: bold;
+      line-height: 1;
+      margin-top: 20px;
+    }
+  }
+
+  .post-block {
+    .inner-block {
+      padding-top: 140px;
+      padding-bottom: 140px;
     }
   }
 }

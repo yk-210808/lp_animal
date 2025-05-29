@@ -1,0 +1,163 @@
+@use '../mixin/mixin'as *;
+@use '../setting/setting'as *;
+
+.c-card-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  grid-gap: 66px;
+  text-align: center;
+  margin-top: 90px;
+
+  .img {
+    background-color: #fff;
+    padding: 6px;
+    max-width: 342px;
+  }
+
+  .list-ttl {
+    font-size: 37px;
+    font-weight: 600;
+    line-height: 1;
+    margin-top: 50px;
+  }
+
+  .list-detail {
+    font-size: 25px;
+    line-height: 1.2;
+    margin-top: 20px;
+  }
+
+  .price {
+    font-size: 41px;
+    font-weight: 600;
+    text-align: center;
+    margin-top: 35px;
+    padding-right: 24px;
+    line-height: 1;
+
+    .correction {
+      position: relative;
+      padding: 0 14px;
+      margin-right: 24px;
+
+      &::after {
+        position: absolute;
+        content: '';
+        width: 100%;
+        height: 4px;
+        background-color: #fff;
+        top: 0;
+        bottom: 0;
+        right: 0;
+        left: 0;
+        margin: auto;
+      }
+    }
+  }
+
+  .c-btn {
+    margin: 28px auto 0;
+  }
+
+  .name {
+    font-size: 29px;
+    font-weight: bold;
+    line-height: 1;
+    margin-top: 40px;
+  }
+
+  .job {
+    font-size: 25px;
+    line-height: 1;
+    margin-top: 13px;
+  }
+
+  .post-ttl {
+    font-size: 25px;
+    font-weight: 600;
+    line-height: 1.2;
+  }
+
+  .post-date {
+    color: $primaryGreen01;
+    text-transform: uppercase;
+    margin-top: 5px;
+  }
+
+  .post-detail {
+    line-height: 1.2;
+    margin-top: 22px;
+  }
+
+  .readmore {
+    font-size: 20px;
+    font-weight: 500;
+    color: $primaryGreen01;
+    line-height: 1;
+    margin-top: 28px;
+  }
+
+  .c-sns-list {
+    margin-top: 30px;
+  }
+
+  &--secondary {
+    gap: 38px;
+
+    .img {
+      background: none;
+      padding: 0;
+      max-width: 361px;
+    }
+  }
+
+  &--post {
+    text-align: left;
+    gap: 38px;
+
+    >li {
+      >a {
+        display: block;
+
+        @include pc {
+          &:hover {
+            @include boxShadow(0, 10px, 51px, 17px);
+
+            .txt-items {
+              border-color: transparent;
+            }
+          }
+        }
+      }
+    }
+
+    .img {
+      background: none;
+      padding: 0;
+      max-width: 361px;
+      height: 0;
+      padding-top: 97%;
+      position: relative;
+      overflow: hidden;
+
+      img {
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        right: 0;
+        left: 0;
+        margin: auto;
+        object-fit: cover;
+        width: 100%;
+        height: 100%;
+      }
+    }
+
+    .txt-items {
+      padding: 30px;
+      border: 2px solid #d6d6d6;
+      border-top: none;
+      transition: border-color $transition01;
+    }
+  }
+}

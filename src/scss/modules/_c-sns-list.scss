@@ -1,0 +1,61 @@
+@use '../mixin/mixin'as *;
+@use '../setting/setting'as *;
+
+.c-sns-list {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 15px;
+  justify-content: center;
+
+  >li {
+    a {
+      --sns-icon-bg: #{$primaryYellow01};
+      --sns-icon-bg-hover: #fff;
+      --sns-icon-outline: #{$primaryYellow01};
+      --sns-icon-color: #fff;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 35px;
+      height: 35px;
+      background-color: var(--sns-icon-bg);
+      outline: 2px solid var(--sns-icon-outline);
+      outline-offset: -2px;
+      border-radius: 555px;
+
+      @include pc {
+        &:hover {
+          background-color: var(--sns-icon-bg-hover);
+
+          .fa-brands {
+            color: var(--sns-icon-outline);
+          }
+        }
+      }
+
+      .fa-brands {
+        color: var(--sns-icon-color);
+        transition: color $transition01;
+      }
+    }
+
+  }
+
+  &--secondary {
+    >li {
+      a {
+        --sns-icon-bg: #fff;
+        --sns-icon-bg-hover: #343434;
+        --sns-icon-outline: #fff;
+        --sns-icon-color: #343434;
+        width: 45px;
+        height: 45px;
+      }
+    }
+
+    .fa-brands {
+      font-size: 26px;
+    }
+  }
+}

@@ -1,0 +1,15 @@
+@use '../mixin/mixin' as *;
+
+.c-ttl01 {
+  font-size: 75px;
+  line-height: 1;
+  font-weight: bold;
+  text-align: center;
+
+  &-detail{
+    font-size: 33px;
+    text-align: center;
+    line-height: 1.2;
+    margin-top: 40px;
+  }
+}

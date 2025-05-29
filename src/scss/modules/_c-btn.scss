@@ -1,0 +1,53 @@
+@use '../mixin/mixin'as *;
+@use '../setting/setting'as *;
+
+/* --------------------------------
+c-btn
+----------------------------------- */
+
+.c-btn {
+  --c-btn-bg: #{$primaryYellow02};
+  --c-btn-bg-hover: #fff;
+  --c-btn-outline: #fff;
+  --c-btn-outline-hover: #fff;
+  font-size: 20px;
+  font-weight: 600;
+  color: #fff;
+  letter-spacing: 0.01em;
+  max-width: 182px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 18.5px 10px;
+  background-color: var(--c-btn-bg);
+  outline: 3px solid var(--c-btn-outline);
+  outline-offset: -3px;
+  border-radius: 7px;
+
+  @include pc {
+    &:hover {
+      background-color: var(--c-btn-bg-hover);
+      color: var(--c-btn-bg);
+      outline-color: var(--c-btn-outline-hover);
+    }
+  }
+
+  &--secondary {
+    --c-btn-bg: #{$primaryGreen01};
+    --c-btn-outline: #{$primaryGreen01};
+    --c-btn-outline-hover: #{$primaryGreen01};
+  }
+
+  &--thirdly {
+    --c-btn-outline: #{$primaryYellow02};
+    --c-btn-outline-hover: #{$primaryYellow02};
+  }
+
+  &--rounded {
+    border-radius: 555px;
+    font-size: 25px;
+    max-width: 200px;
+    padding: 10px;
+  }
+}
