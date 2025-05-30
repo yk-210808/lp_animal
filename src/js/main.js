@@ -1,12 +1,11 @@
-import {
-  gsap
-} from "gsap";
-import {
-  ScrollTrigger
-} from "gsap/ScrollTrigger";
+import { gsap } from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
 
 gsap.registerPlugin(ScrollTrigger);
 
+/**
+ * GSAP ScrollTrigger setup
+ */
 gsap.to('.js--scrollSection:not(:last-of-type)', {
   yPercent: -100,
   ease: "none",
@@ -19,7 +18,6 @@ gsap.to('.js--scrollSection:not(:last-of-type)', {
     pin: true
   }
 });
-
 gsap.set(".js--scrollSection", {zIndex: (i, target, targets) => targets.length - i});
 
 (function ($) {
