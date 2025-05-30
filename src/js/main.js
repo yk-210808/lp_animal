@@ -1,24 +1,68 @@
-import { gsap } from "gsap";
-import { ScrollTrigger } from "gsap/ScrollTrigger";
+import {
+  gsap
+} from "gsap";
+import {
+  ScrollTrigger
+} from "gsap/ScrollTrigger";
+import {
+  SplitText
+} from "gsap/SplitText";
+import {
+  ScrollToPlugin
+} from "gsap/ScrollToPlugin";
 
-gsap.registerPlugin(ScrollTrigger);
+gsap.config({
+  trialWarn: false
+});
+console.clear();
+gsap.registerPlugin(ScrollTrigger, SplitText, ScrollToPlugin);
+
+const sectionTotal = document.querySelectorAll('.js--scrollSection').length;
 
 /**
  * GSAP ScrollTrigger setup
  */
-gsap.to('.js--scrollSection:not(:last-of-type)', {
-  yPercent: -100,
-  ease: "none",
-  stagger: 0.5,
-  scrollTrigger: {
-    trigger: '.js--scrollContainer',
-    start: "top top",
-    end: "+=400%",
-    scrub: true,
-    pin: true
+
+let panels = gsap.utils.toArray(".js--scrollSection");
+let tops = panels.map(panel => ScrollTrigger.create({
+  trigger: panel,
+  start: "top top"
+}));
+
+panels.forEach((panel, i) => {
+  let animation = gsap.timeline({
+    scrollTrigger: { 
+      trigger: panel, 
+      toggleActions: "restart pause pause pause"
+    }
+  });
+
+  const splitTextElement = panel.querySelector(".split");
+
+    if (splitTextElement) { // .split 要素が存在する場合のみ処理
+    let split = new SplitText(splitTextElement, {
+      type: "chars"
+    });
+
+    animation.from(split.chars, {
+      x: 150,
+      opacity: 0,
+      ease: "power4",
+      stagger: {
+        each: 0.05
+      }
+    });
+  }
+
+  if(i !== sectionTotal - 1) {
+    ScrollTrigger.create({
+      trigger: panel,
+      start: () => panel.offsetHeight < window.innerHeight ? "top top" : "bottom bottom",
+      pin: true,
+      pinSpacing: false
+    });
   }
 });
-gsap.set(".js--scrollSection", {zIndex: (i, target, targets) => targets.length - i});
 
 (function ($) {
   'use strict';
