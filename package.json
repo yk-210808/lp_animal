@@ -17,6 +17,7 @@
   "dependencies": {
     "autoprefixer": "^10.4.20",
     "glob": "^11.0.1",
+    "gsap": "^3.13.0",
     "vite-plugin-ssinc": "^1.0.11"
   }
 }

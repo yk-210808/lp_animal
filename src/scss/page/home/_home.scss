@@ -2,6 +2,27 @@
 @use '../../setting/setting'as *;
 
 .home {
+  width: 100%;
+  height: 100svh;
+  position: absolute;
+  top: 0;
+  left: 0;
+  overflow: hidden;
+
+  .section {
+    // min-height: calc(100svh - 120px);
+    min-height: 100svh;
+    display: flex;
+    align-items: center;
+    position: absolute;
+    will-change: transform;
+    width: 100%;
+
+    @include sp {
+      // min-height: calc(100svh - 50px);
+    }
+  }
+
   .mv-block {
     background-color: $primaryYellow02;
     color: #fff;
@@ -16,8 +37,8 @@
 
       @include sp {
         flex-direction: column;
-        padding-top: 60px;
-        padding-bottom: 60px;
+        padding-top: 80px;
+        padding-bottom: 80px;
       }
     }
 
@@ -55,7 +76,7 @@
       align-items: center;
       gap: 35px;
       margin-top: 40px;
-      
+
       @include sp {
         flex-wrap: wrap;
         gap: 15px;
@@ -70,6 +91,8 @@
   }
 
   .about-block {
+    background-color: #fff;
+
     .inner-block {
       padding-top: 140px;
       padding-bottom: 140px;
@@ -79,8 +102,8 @@
 
       @include sp {
         flex-direction: column;
-        padding-top: 60px;
-        padding-bottom: 60px;
+        padding-top: 80px;
+        padding-bottom: 80px;
       }
     }
 
@@ -154,20 +177,22 @@
       padding-bottom: 100px;
 
       @include sp {
-        padding-top: 60px;
-        padding-bottom: 60px;
+        padding-top: 80px;
+        padding-bottom: 80px;
       }
     }
   }
 
   .team-block {
+    background-color: #fff;
+
     .inner-block {
       padding-top: 140px;
       padding-bottom: 140px;
 
       @include sp {
-        padding-top: 60px;
-        padding-bottom: 60px;
+        padding-top: 80px;
+        padding-bottom: 80px;
       }
     }
   }
@@ -182,8 +207,8 @@
       padding-bottom: 165px;
 
       @include sp {
-        padding-top: 60px;
-        padding-bottom: 60px;
+        padding-top: 80px;
+        padding-bottom: 80px;
       }
     }
 
@@ -194,8 +219,8 @@
       gap: 50px;
 
       @include max(840) {
-      flex-wrap: wrap;
-      justify-content: center;
+        flex-wrap: wrap;
+        justify-content: center;
       }
 
       @include sp {
@@ -260,13 +285,15 @@
   }
 
   .post-block {
+    background-color: #fff;
+
     .inner-block {
       padding-top: 140px;
       padding-bottom: 140px;
 
       @include sp {
-        padding-top: 60px;
-        padding-bottom: 60px;
+        padding-top: 80px;
+        padding-bottom: 80px;
       }
     }
   }

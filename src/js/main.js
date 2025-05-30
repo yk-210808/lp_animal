@@ -1,3 +1,27 @@
+import {
+  gsap
+} from "gsap";
+import {
+  ScrollTrigger
+} from "gsap/ScrollTrigger";
+
+gsap.registerPlugin(ScrollTrigger);
+
+gsap.to('.js--scrollSection:not(:last-of-type)', {
+  yPercent: -100,
+  ease: "none",
+  stagger: 0.5,
+  scrollTrigger: {
+    trigger: '.js--scrollContainer',
+    start: "top top",
+    end: "+=400%",
+    scrub: true,
+    pin: true
+  }
+});
+
+gsap.set(".js--scrollSection", {zIndex: (i, target, targets) => targets.length - i});
+
 (function ($) {
   'use strict';
 

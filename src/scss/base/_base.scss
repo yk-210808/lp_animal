@@ -148,6 +148,7 @@ main {
 .inner-block {
   margin: 0 auto;
   position: relative;
+  width: 100%;
   @include pc {
     padding: 0 30px;
     max-width: 1220px;
