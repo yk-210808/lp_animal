@@ -64,6 +64,11 @@ c-form
     padding: 20px;
     max-width: 385px;
     width: 100%;
+
+    @include sp {
+      height: 50px;
+      padding: 10px;
+    }
   }
 
   &--subsc {
@@ -74,11 +79,21 @@ c-form
       height: 90px;
       max-width: 145px;
       width: 100%;
+
+      @include sp {
+        height: 50px;
+        max-width: 60px;
+        padding: 10px;
+      }
     }
 
     .fa-solid {
       font-size: 32px;
       transition: color $transition01;
+
+      @include sp {
+        font-size: 20px;
+      }
     }
   }
 }

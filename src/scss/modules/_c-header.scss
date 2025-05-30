@@ -4,6 +4,15 @@
 /* --------------------------------
 c-header
 ----------------------------------- */
+
+header {
+  position: sticky;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 50;
+}
+
 .c-header {
   background-color: $primaryYellow01;
   color: #fff;
@@ -36,6 +45,7 @@ c-header
     display: flex;
     align-items: center;
     width: 100%;
+    transition: opacity $transition01;
 
     @include pc {
       justify-content: space-between;
@@ -51,6 +61,7 @@ c-header
       height: calc(100svh - 50px);
       opacity: 0;
       pointer-events: none;
+      z-index: 10;
     }
   }
 
@@ -117,6 +128,7 @@ c-header
       right: 0;
       left: 0;
       margin: auto;
+      transition: $transition01;
 
       &:first-of-type {
         top: 15px;

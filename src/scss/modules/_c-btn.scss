@@ -14,7 +14,6 @@ c-btn
   font-weight: 600;
   color: #fff;
   letter-spacing: 0.01em;
-  max-width: 182px;
   width: 100%;
   display: flex;
   align-items: center;
@@ -26,11 +25,18 @@ c-btn
   border-radius: 7px;
 
   @include pc {
+    max-width: 182px;
+
     &:hover {
       background-color: var(--c-btn-bg-hover);
       color: var(--c-btn-bg);
       outline-color: var(--c-btn-outline-hover);
     }
+  }
+
+  @include sp {
+    font-size: 16px;
+    padding: 15px 10px;
   }
 
   &--secondary {
@@ -49,5 +55,10 @@ c-btn
     font-size: 25px;
     max-width: 200px;
     padding: 10px;
+
+    @include sp {
+      font-size: 18px;
+      max-width: 100%;
+    }
   }
 }

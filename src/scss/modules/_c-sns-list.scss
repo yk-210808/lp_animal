@@ -8,6 +8,10 @@
   gap: 15px;
   justify-content: center;
 
+  @include sp {
+    gap: 10px;
+  }
+
   >li {
     a {
       --sns-icon-bg: #{$primaryYellow01};
@@ -51,11 +55,20 @@
         --sns-icon-color: #343434;
         width: 45px;
         height: 45px;
+
+        @include sp {
+          width: 35px;
+          height: 35px;
+        }
       }
     }
 
     .fa-brands {
       font-size: 26px;
+
+      @include sp {
+        font-size: 20px;
+      }
     }
   }
 }

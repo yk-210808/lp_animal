@@ -8,10 +8,17 @@
   text-align: center;
   margin-top: 90px;
 
+  @include sp {
+    grid-gap: 30px;
+    margin-top: 50px;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  }
+
   .img {
     background-color: #fff;
     padding: 6px;
     max-width: 342px;
+    margin: 0 auto;
   }
 
   .list-ttl {
@@ -19,12 +26,22 @@
     font-weight: 600;
     line-height: 1;
     margin-top: 50px;
+
+    @include sp {
+      font-size: 22px;
+      margin-top: 20px;
+    }
   }
 
   .list-detail {
     font-size: 25px;
     line-height: 1.2;
     margin-top: 20px;
+
+    @include sp {
+      font-size: 18px;
+      margin-top: 15px;
+    }
   }
 
   .price {
@@ -35,10 +52,21 @@
     padding-right: 24px;
     line-height: 1;
 
+    @include sp {
+      font-size: 24px;
+      margin-top: 20px;
+      padding-right: 0;
+    }
+
     .correction {
       position: relative;
       padding: 0 14px;
       margin-right: 24px;
+
+      @include sp {
+        padding: 0 8px;
+        margin-right: 16px;
+      }
 
       &::after {
         position: absolute;
@@ -51,6 +79,10 @@
         right: 0;
         left: 0;
         margin: auto;
+
+        @include sp {
+          height: 3px;
+        }
       }
     }
   }
@@ -64,18 +96,33 @@
     font-weight: bold;
     line-height: 1;
     margin-top: 40px;
+
+    @include sp {
+      font-size: 20px;
+      margin-top: 20px;
+    }
   }
 
   .job {
     font-size: 25px;
     line-height: 1;
     margin-top: 13px;
+
+    @include sp {
+      font-size: 18px;
+      margin-top: 10px;
+    }
   }
 
   .post-ttl {
     font-size: 25px;
     font-weight: 600;
     line-height: 1.2;
+
+    @include sp {
+      font-size: 20px;
+      margin-top: 10px;
+    }
   }
 
   .post-date {
@@ -87,6 +134,10 @@
   .post-detail {
     line-height: 1.2;
     margin-top: 22px;
+
+    @include sp {
+      margin-top: 15px;
+    }
   }
 
   .readmore {
@@ -95,14 +146,27 @@
     color: $primaryGreen01;
     line-height: 1;
     margin-top: 28px;
+
+    @include sp {
+      font-size: 16px;
+      margin-top: 20px;
+    }
   }
 
   .c-sns-list {
     margin-top: 30px;
+
+    @include sp {
+      margin-top: 15px;
+    }
   }
 
   &--secondary {
     gap: 38px;
+
+    @include sp {
+      gap: 30px;
+    }
 
     .img {
       background: none;
@@ -114,6 +178,10 @@
   &--post {
     text-align: left;
     gap: 38px;
+
+    @include sp {
+      gap: 30px;
+    }
 
     >li {
       >a {
@@ -140,6 +208,10 @@
       position: relative;
       overflow: hidden;
 
+      @include sp {
+        max-width: none;
+      }
+
       img {
         position: absolute;
         top: 0;
@@ -158,6 +230,10 @@
       border: 2px solid #d6d6d6;
       border-top: none;
       transition: border-color $transition01;
+
+      @include sp {
+        padding: 20px;
+      }
     }
   }
 }

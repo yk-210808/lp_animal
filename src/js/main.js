@@ -61,7 +61,9 @@
   var checkBreakPoint = function (mql) {
     deviceFlag = mql.matches ? 1 : 0; // 0 : PC ,  1 : SP
     // → PC
-    if (deviceFlag == 0) {} else {
+    if (deviceFlag == 0) {
+      headerMenuClose();
+    } else {
       // →SP
     }
     deviceFlag = mql.matches;
@@ -103,11 +105,58 @@
     return false;
   });
 
+  /**
+   * Functions
+   */
+  // scroll control
+  var isScrollable = true;
+  var winScroll;
+  var getScrollPos = function () {
+    if (!isScrollable) {
+      return;
+    }
+    winScroll = window.scrollY || window.pageYOffset;
+  }
+  $(window).on('scroll', function () {
+    getScrollPos();
+  });
+  getScrollPos();
+
+  function scrollOff() {
+    $('body').css({
+      'cssText': 'position : fixed; top : ' + (-winScroll) + 'px !important; width: 100%;'
+    });
+    isScrollable = false;
+  };
+
+  function scrollOn() {
+    $('body').css({
+      'position': '',
+      'top': ''
+    });
+    window.scrollTo(0, winScroll);
+    isScrollable = true;
+  };
+
+  // headerMenu
+  function headerMenuOpen() {
+    $('.js--headerMenuTrigger').addClass('is_active');
+    scrollOff();
+  }
+
+  function headerMenuClose() {
+    $('.js--headerMenuTrigger').removeClass('is_active');
+    scrollOn();
+  }
+
+  /**
+   * Events
+   */
   $(function () {
+    /**
+     * サムネイルクリックで動画再生
+     */
     if ($('.js--videoPlayTrigger')[0]) {
-      /**
-       * サムネイルクリックで動画再生
-       */
       $('.js--videoPlayTrigger').on('click', function () {
         const $this = $(this);
         const $video = $this.siblings('video');
@@ -119,6 +168,23 @@
         }
       });
     }
+
+    /**
+     * ヘッダーメニューのトグル
+     */
+    if ($('.js--headerMenuTrigger')[0]) {
+      $('.js--headerMenuTrigger').on('click', function () {
+        const $this = $(this);
+
+        if ($this.hasClass('is_active')) {
+          headerMenuClose();
+        } else {
+          headerMenuOpen();
+        }
+      });
+    }
   });
+
+
 
 })(jQuery);

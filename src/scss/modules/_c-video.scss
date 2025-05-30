@@ -7,13 +7,19 @@ c-video
 
 .c-video {
   // max-width: 506px;
-  max-width: 43.6%;
   width: 100%;
   position: relative;
   margin-left: 40px;
   margin-bottom: 33px;
   z-index: 1;
   flex-shrink: 0;
+  max-width: 43.6%;
+
+  @include sp {
+    margin-left: 15px;
+    margin-bottom: 15px;
+    max-width: 85%;
+  }
 
   &::after {
     position: absolute;
@@ -26,6 +32,14 @@ c-video
     bottom: -33px;
     z-index: -1;
     pointer-events: none;
+
+    @include sp {
+      height: 43%;
+      width: 50%;
+      max-width: none;
+      bottom: -15px;
+      left: -15px;
+    }
   }
 
   .inn {
@@ -61,9 +75,17 @@ c-video
     margin-left: 0;
     margin-right: 40px;
 
+    @include sp {
+      margin-right: 15px;
+    }
+
     &::after {
       left: auto;
       right: -40px;
+
+      @include sp {
+        right: -15px;
+      }
     }
   }
 }
