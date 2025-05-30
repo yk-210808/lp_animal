@@ -11,6 +11,13 @@
     display: flex;
     justify-content: space-between;
 
+    @include pc {
+      @include max(850) {
+        flex-direction: column-reverse;
+        gap: 50px;
+      }
+    }
+
     @include sp {
       flex-direction: column;
       padding-top: 80px;
@@ -22,8 +29,15 @@
     display: flex;
     justify-content: space-between;
     gap: 30px;
-    width: 47%;
     margin-top: 15px;
+
+    @include min(851) {
+      width: 47%;
+    }
+
+    @include max(850) {
+      justify-content: flex-start;
+    }
   }
 
   .list-ttl {
@@ -55,7 +69,10 @@
   }
 
   .other-items {
-    width: 47%;
+
+    @include min(851) {
+      width: 47%;
+    }
 
     @include sp {
       width: 100%;
@@ -68,8 +85,11 @@
     font-weight: 600;
     text-align: right;
 
-    @include sp {
+    @include max(850) {
       text-align: left;
+    }
+
+    @include sp {
       font-size: 30px;
     }
   }
@@ -80,8 +100,11 @@
     margin-top: 14px;
     text-align: right;
 
-    @include sp {
+    @include max(850) {
       text-align: left;
+    }
+
+    @include sp {
       font-size: 20px;
     }
   }
@@ -90,9 +113,12 @@
     margin-top: 50px;
     justify-content: end;
 
+    @include max(850) {
+      justify-content: flex-start;
+    }
+
     @include sp {
       margin-top: 30px;
-      justify-content: flex-start;
     }
   }
 
@@ -100,9 +126,13 @@
     margin-top: 50px;
     justify-content: flex-end;
 
+    @include max(850) {
+      justify-content: flex-start;
+    }
+    
     @include sp {
-      margin-top: 30px;
       justify-content: center;
+      margin-top: 30px;
     }
   }
 }

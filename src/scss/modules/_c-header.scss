@@ -34,6 +34,10 @@ header {
     display: inline-block;
     flex-shrink: 0;
 
+    @include pc {
+      width: clamp(150px, #{(vw(212, 1220))}, 212px);
+    }
+
     @include sp {
       width: 140px;
       padding: 10px 20px;
@@ -68,7 +72,7 @@ header {
   .link-list {
     display: flex;
     align-items: center;
-    font-size: 29px;
+    font-size: clamp(16px, #{vw(29, 1220)}, 29px);
     font-weight: 500;
 
     @include sp {
@@ -92,7 +96,7 @@ header {
     }
 
     a {
-      padding: 0 21px;
+      padding: 0 clamp(10px, #{vw(20, 1220)}, 21px);
 
       @include sp {
         display: block;
@@ -108,8 +112,28 @@ header {
   }
 
   .c-form {
+    @include pc {
+      @include max(900) {
+        display: none;
+      }
+    }
+
     @include sp {
       margin-top: 50px;
+    }
+
+    .input-text {
+      @include pc {
+        max-width: clamp(150px, #{(vw(200, 1220))}, 200px);
+      }
+    }
+
+    .send-btn {
+      @include pc {
+        @include max(1220) {
+          padding: 5px 15px;
+        }
+      }
     }
   }
 

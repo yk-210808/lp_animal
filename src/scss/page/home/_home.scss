@@ -27,6 +27,12 @@
       letter-spacing: 0.01em;
       line-height: 1.2;
 
+      @include pc {
+        @include max(850) {
+          font-size: 45px;
+        }
+      }
+
       @include sp {
         font-size: 34px;
       }
@@ -47,11 +53,11 @@
     .btn-items {
       display: flex;
       align-items: center;
-      flex-wrap: wrap;
       gap: 35px;
       margin-top: 40px;
-
+      
       @include sp {
+        flex-wrap: wrap;
         gap: 15px;
         margin-top: 30px;
       }
@@ -82,6 +88,12 @@
       font-size: 50px;
       font-weight: 600;
       line-height: 1.2;
+
+      @include pc {
+        @include max(850) {
+          font-size: 40px;
+        }
+      }
 
       @include sp {
         font-size: 28px;
@@ -181,10 +193,14 @@
       align-items: center;
       gap: 50px;
 
+      @include max(840) {
+      flex-wrap: wrap;
+      justify-content: center;
+      }
+
       @include sp {
         justify-content: center;
         align-items: stretch;
-        flex-wrap: wrap;
         gap: 30px 10px;
       }
 
